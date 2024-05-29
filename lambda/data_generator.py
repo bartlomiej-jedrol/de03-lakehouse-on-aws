@@ -119,16 +119,10 @@ def put_object(bucket_name: str, object_key: str, data: list):
     s3 = boto3.client('s3')
     try:
         s3.put_object(Bucket=bucket_name, Key=object_key, Body=data_string)
-        # print(
-        #     f'Successfully put object to the bucket: {bucket_name} with key: {object_key}\n'
-        # )
         logger.info(
             f'Successfully put object to the bucket: {bucket_name} with key: {object_key}\n'
         )
     except Exception as e:
-        # print(
-        #     f'Failed to put object to the bucket: {bucket_name} with key: {object_key}: {e}\n'
-        # )
         logger.error(
             f'Failed to put object to the bucket: {bucket_name} with key: {object_key}: {e}\n'
         )
