@@ -3,4 +3,4 @@ Makefile
 terraform/.terraform/
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
-lambda/.env/
+lambda/.env

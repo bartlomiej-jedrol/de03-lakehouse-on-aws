@@ -151,8 +151,8 @@ def lambda_handler(event, context):
     )
 
     bucket_name = RAW_BUCKET_NAME
-    games_key = f'Games/{datetime.now().strftime("%Y-%m-%d")}/games_info_{datetime.now().strftime("%Y-%m-%d")}.json'
-    players_key = f'Players/{datetime.now().strftime("%Y-%m-%d")}/players_info_{datetime.now().strftime("%Y-%m-%d")}.json'
+    games_key = f'Games/{datetime.now().strftime("%Y-%m-%d")}/games_info_{datetime.now().strftime("%Y-%m-%d_%H")}.json'
+    players_key = f'Players/{datetime.now().strftime("%Y-%m-%d")}/players_info_{datetime.now().strftime("%Y-%m-%d_%H")}.json'
 
     # Put games info and players activity to the S3 bucket
     put_object(bucket_name=bucket_name, object_key=games_key, data=games)
